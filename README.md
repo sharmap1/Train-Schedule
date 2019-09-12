@@ -7,11 +7,11 @@ This is a front end app that accepts user input to add new train name, start tim
 * Once submitted, the information gets stored in firebase.
 * Input the time in military time with colon
 * The minutes away and next arrival will be displayed on the screen as per the frequency time input.
-
+# Link
 https://sharmap1.github.io/Train-Schedule/
 
 ## Screenshot
-<img src="assets/images/screenshot.jpg" width="250" height="350"> 
+<img src="assets/images/screenshot.jpg" width="550" height="350"> 
 
 ## Installation
 ```
@@ -43,7 +43,10 @@ Open app in any supported web browser i.e. Chrome, Firefox, Safari, etc.
 
 ## History
 ```
-This marks the end of unit 7 where we have learned working with Client Side Storage: uses cookies, sessionStorage, and localStorage to save and reuse user data across a user’s session; Server Side Storage: saves user info to a database that can be reused across multiple devices and sessions and Firebase to accomplish this.And also covered working with Date objects in JavaScript using the Moment.js library.
+This marks the end of unit 7 where we have learned working with Client Side Storage: uses cookies, sessionStorage, 
+and localStorage to save and reuse user data across a user’s session; Server Side Storage: saves user info to a 
+database that can be reused across multiple devices and sessions and Firebase to accomplish this.And also covered 
+working with Date objects in JavaScript using the Moment.js library.
 ```
 ## Credits
 ```
