@@ -20,7 +20,7 @@ var firstTrainTime = "";
 var trainFrequency = "";
 var nextArrival = "";
 var minutesAway = "";
-
+// var id =0;
 function nowTime() {
   var now = moment().format('LT');
   $("#nowTime").html(now);
@@ -47,8 +47,9 @@ $("#add-button").on("click", function(event){
     frequency: cTrainFreq,
     arrival: nextArrival,
     minutes: minutesAway,
-    dateAdded: firebase.database.ServerValue.TIMESTAMP
-    });    
+    dateAdded: firebase.database.ServerValue.TIMESTAMP,
+    // id: id++,
+  });    
     //  alert that train was added
     alert("Train successuflly added!");
 
@@ -91,7 +92,7 @@ database.ref().on("child_added", function(childSnapshot) {
     var minutesTillArrival = "";
     var nextTrainTime = "";
     var frequency = childSnapshot.val().frequency;
-
+    // id = childSnapshot.val().id
     // compute the difference in time from 'now' and the first train using UNIX timestamp, store in var and convert to minutes
     trainDiff = moment().diff(moment.unix(childSnapshot.val().time), "minutes");
     // get the remainder of time by using 'moderator' with the frequency & time difference, store in var
@@ -106,10 +107,10 @@ database.ref().on("child_added", function(childSnapshot) {
     "<td>" + childSnapshot.val().frequency + "</td>" +
     "<td>" + minutesTillArrival + "</td>" +
     "<td>" + nextTrainTime + "  " + 
-    "<a><span class='glyphicon glyphicon-remove icon-hidden' aria-hidden='true'></span></a>" + "</td></tr>"
+    "<a><span id='" + "' class='glyphicon glyphicon-remove icon-hidden' aria-hidden='true'></span></a>" + "</td></tr>"
     );
 
-    $("span").hide();
+    $("span").hide(); 
 
     // Hover view of delete button
     $("tr").hover(
@@ -158,6 +159,11 @@ database.ref().on("child_added", function(childSnapshot) {
 //   }
 // });
   });
+// $(".glyphicon glyphicon-remove icon-hidden").on("click",function(){
+//   var dataId = parseInt($(this).attr("id"));
+
+// });
+
 
   nowTime();
   
