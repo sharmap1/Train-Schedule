@@ -7,11 +7,6 @@ This is a front end app that accepts user input to add new train name, start tim
 * Once submitted, the information gets stored in firebase.
 * Input the time in military time with colon
 * The minutes away and next arrival will be displayed on the screen as per the frequency time input.
-# Link
-https://sharmap1.github.io/Train-Schedule/
-
-## Screenshot
-<img src="assets/images/screenshot.jpg" width="550" height="350"> 
 
 ## Installation
 ```
